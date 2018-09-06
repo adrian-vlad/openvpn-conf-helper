@@ -15,7 +15,7 @@ sudo adduser --system --shell /usr/sbin/nologin --no-create-home ovpn
 sudo groupadd ovpn
 sudo usermod -g ovpn ovpn
 ```
-Start the script, navigate and input the required options to create configuration files for server and clients. This will create the certificates and all the required settings to setup a hardened openvpn server.
+Start the script, navigate and input the required options to create configuration files for server and clients. This will create the certificates and all the required settings to setup a hardened openvpn environment.
 
 Copy the files in the resulted folder to /etc/openvpn/ and enable and start the server.
 ```
