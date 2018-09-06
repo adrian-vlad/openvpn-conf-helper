@@ -3,6 +3,22 @@ Start the script, navigate and input the required options to create configuratio
 
 Supported platforms: Ubuntu 16.04 and up. Might work on others. Try and see.
 
+### Install
+The official Ubuntu repository is lagging behind with the version of Openvpn server
+So do the following
+```
+curl -s https://swupdate.openvpn.net/repos/repo-public.gpg | sudo apt-key add
+sudo vim /etc/apt/sources.list.d/openvpn-aptrepo.list
+and add "deb http://build.openvpn.net/debian/openvpn/stable xenial main"
+sudo apt-get update
+sudo apt-get install openvpn
+```
+```
+sudo adduser --system --shell /usr/sbin/nologin --no-create-home ovpn
+sudo groupadd ovpn
+sudo usermod -g ovpn ovpn
+```
+
 Useful links:
 - https://wwwx.cs.unc.edu/~sparkst/howto/network_tuning.php
 - https://community.openvpn.net/openvpn/ticket/461#comment:11
