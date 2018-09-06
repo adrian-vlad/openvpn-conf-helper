@@ -1,0 +1,9 @@
+#### OpenVPN Client Version v2.4.6
+
+# Tunnel options
+client
+nobind
+resolv-retry infinite
+
+# Encryption
+remote-cert-tls 'server'

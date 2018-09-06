@@ -1,0 +1,12 @@
+# Tunnel options
+dev 'tun'
+proto 'udp'
+reneg-sec '60'
+
+# Connection Reliability
+persist-key
+persist-tun
+
+# Logging
+mute '5'
+verb '3'

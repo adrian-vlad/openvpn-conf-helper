@@ -1,0 +1,46 @@
+#### OpenVPN Server Version v2.4.6
+
+# Tunnel options
+topology 'subnet'
+
+# Routes
+server 10.8.1.0 255.255.255.0
+push "redirect-gateway def1 bypass-dhcp"
+ifconfig-pool-persist 'ipp.txt'
+
+# Client Config
+#ccd-exclusive '1'
+#client-config_dir '/etc/openvpn/ccd/'
+client-to-client
+float
+
+# Encryption
+tls-version-min '1.2'
+replay-persist 'replay_persist.log'
+tls-cipher 'TLS-DHE-RSA-WITH-AES-256-GCM-SHA384:TLS-DHE-RSA-WITH-AES-256-CBC-SHA256'
+reneg-sec '60'
+remote-cert-tls 'client'
+verify-client-cert 'require'
+ncp-ciphers 'AES-256-GCM:AES-256-CBC'
+auth 'SHA512'
+
+# Logging
+status 'openvpn-status.log'
+
+# Connection
+keepalive 10 60
+script-security '1'
+
+# Connection Reliability
+persist-local-ip
+persist-remote-ip
+
+# Permissions
+user 'ovpn'
+group 'ovpn'
+
+# Tweaks
+sndbuf 0
+rcvbuf 0
+push "sndbuf 393216"
+push "rcvbuf 393216"
