@@ -1,6 +1,7 @@
 # Tunnel options
 dev 'tun'
 proto 'udp'
+float
 
 # Connection Reliability
 persist-key
