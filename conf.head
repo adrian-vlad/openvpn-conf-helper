@@ -1,7 +1,6 @@
 # Tunnel options
 dev 'tun'
 proto 'udp'
-reneg-sec '60'
 
 # Connection Reliability
 persist-key
