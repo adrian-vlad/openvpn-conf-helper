@@ -12,7 +12,6 @@ ifconfig-pool-persist 'ipp.txt'
 #ccd-exclusive '1'
 #client-config_dir '/etc/openvpn/ccd/'
 client-to-client
-float
 
 # Encryption
 tls-version-min '1.2'
